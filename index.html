@@ -4,94 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizonte Hídrico Ñuble</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f1ece8;
-        }
-        header {
-            background-color: #296eb4;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .container {
-            padding: 2rem;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .section img {
-            max-width: 100%;
-            height: auto;
-        }
-        .footer {
-            background-color: #503b31;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Horizonte Hídrico Ñuble</h1>
-        <p>Impactos, Controversias y Soluciones a la Escasez de Agua</p>
-    </header>
-
     <div class="container">
-        <div class="section">
-            <h2>Introducción</h2>
-            <p>La Región de Ñuble, establecida como la XVI región de Chile en 2018, se compone de 21 comunas distribuidas en tres provincias: Diguillín, Punilla e Itata, con Chillán como su capital. Con una geografía diversa que incluye playas, valles y montañas, esta región tiene una economía predominantemente agrícola, destacándose en la producción de viñedos en el Valle del Itata.</p>
-        </div>
+        <header>
+            <img src="logo.png" alt="Logo Horizonte Hídrico Ñuble" class="logo">
+            <h1>Horizonte Hídrico Ñuble</h1>
+            <p>Impactos, controversias y soluciones a la escasez de agua</p>
+            <nav>
+                <ul>
+                    <li><a href="#crisis-mundial">La crisis hídrica</a></li>
+                    <li><a href="#epicentro-sequia">Ñuble, el epicentro de la sequía</a></li>
+                    <li><a href="#embalses">Embalses en Ñuble</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="section">
-            <h2>Causas de la Crisis Hídrica</h2>
-            <p>El cambio climático ha provocado una disminución significativa de las precipitaciones y un aumento en las temperaturas. Esta situación se ha agravado debido a más de una década de sequía severa, la más larga en mil años. Además, la gestión ineficiente y la sobreexplotación del agua han contribuido a la crisis, con una distribución del recurso desigual y concentrada en pocas manos.</p>
-        </div>
+        <section id="crisis-mundial">
+            <h2>La crisis hídrica: un problema mundial</h2>
+            <h3>En Chile</h3>
+            <p>La crisis hídrica es una realidad en Chile y el mundo...</p>
+            <div class="image-placeholder">Imagen relacionada con la crisis hídrica en Chile</div>
+            <h3>En Ñuble</h3>
+            <p>La Región de Ñuble se inauguró apenas el 2018...</p>
+            <div class="image-placeholder">Imagen relacionada con la sequía en Ñuble</div>
+        </section>
 
-        <div class="section">
-            <h2>Impacto en la Región</h2>
-            <p>La falta de agua ha tenido un impacto devastador en la agricultura local, reduciendo la producción y afectando a los agricultores que dependen de este recurso para su subsistencia. La escasez de agua también ha dificultado el suministro de agua potable, afectando a miles de residentes y generando preocupaciones sobre la salud pública. Económicamente, la crisis ha disminuido la producción agrícola y ha afectado a la industria local.</p>
-        </div>
+        <section id="epicentro-sequia">
+            <h2>Ñuble, el epicentro de la sequía</h2>
+            <p>Sólo en el Valle del Itata hay cerca de 7 mil personas...</p>
+            <div class="image-placeholder">Imagen relacionada con la sequía en el Valle del Itata</div>
+            <h3>A casi 6 años del comienzo</h3>
+            <p>Ñuble es una región nueva. ¿Influye eso en algo? Sí, los estudios e investigaciones centrados en la región son escasos y ha tenido desafíos relacionados a la instalación.</p>
+            <p>Sin embargo, la crisis hídrica es un problema que debe enfrentarse con apoyo de las autoridades. El Congreso Futuro 202, llevado a cabo en Ñuble, abordó este tema.</p>
+            <p>El gobernador Óscar Crisóstomo, sostuvo que “el Congreso Futuro es el principal punto de encuentro sudamericano donde la ciencia y la tecnología se dan un lugar y donde existe la posibilidad de poder escuchar y dialogar con los especialistas más destacados del mundo. (…) una exposición y un diálogo muy fructífero en dos temas muy relevantes para la región: agua y alimentación”</p>
+            <p>La actividad contó con la exposición de la experta marroquí, Charafat Afailal, con el tema “Aguas en riesgo: asegurando el futuro en la crisis climática”, quien es ingeniera y política en recursos hídricos y fue secretaria de Estado Encargada del Agua en Marruecos y ha dedicado la mayor parte de su carrera profesional a la gestión y conservación del agua.</p>
+            <p>La ingeniera y política afirmó que el cambio climático está afectando directamente al agua, convirtiéndola en su primera víctima. Aseguró que es crucial integrar las agendas climáticas y hídricas, evitando que el agua sea considerada un componente marginal en las discusiones sobre el medio ambiente.</p>
+            <p>La preocupación de Afailal se centra en la falta de conciencia y cuidado en el uso del agua, señalando que abrir la llave en casa se ha vuelto una acción mecánica sin comprender las implicaciones detrás de este acto cotidiano. Subraya que es esencial educar a la población sobre la gestión sostenible del agua.</p>
+            
+            <h3>Variaciones en los caudales de los ríos</h3>
+            <div class="charts">
+                <div id="chart-chillan" class="chart"></div>
+                <div id="chart-itata" class="chart"></div>
+            </div>
+            <p class="chart-footer">Elaboración propia // Datos: Dirección General de Aguas (DGA)</p>
+        </section>
 
-        <div class="section">
-            <h2>Testimonios</h2>
-            <p>"Antes, podíamos regar nuestras tierras sin problema, ahora todo es más difícil," comenta Juan Pérez, agricultor local.</p>
-            <p>"Nos preocupa la falta de agua para nuestras familias," dice María López, residente de Chillán.</p>
-            <p>"La gestión sostenible del agua es crucial para enfrentar esta crisis," señala el Dr. Pedro González, experto en recursos hídricos.</p>
-        </div>
-
-        <div class="section">
-            <h2>Medidas y Proyectos</h2>
+        <section id="embalses">
+            <h2>Embalses en Ñuble</h2>
+            <p>Un embalse es una estructura hidráulica que contiene un gran depósito de agua, donde se almacenan aguas de ríos. Entre otros fines, el embalse es usa para el riego, abastecimiento, producción de energía eléctrica y actividades de ocio.</p>
             <p>En respuesta a la crisis, se han implementado varias medidas y proyectos. El gobierno ha iniciado la construcción de embalses y plantas desaladoras, mientras que las comunidades locales han desarrollado proyectos de captación de agua de lluvia y técnicas de riego más eficientes. Además, se están utilizando tecnologías avanzadas para monitorear y gestionar el uso del agua, promoviendo su conservación.</p>
-        </div>
+            <p>Sin embargo, algunos de estos proyectos han generado controversias. El embalse Punilla, por ejemplo, ha sido criticado por su impacto ambiental y social, desplazando a comunidades y afectando ecosistemas locales.</p>
+            <p>De manera similar, el embalse Zapallar ha generado conflictos debido a la falta de consulta a las comunidades afectadas y los impactos ambientales negativos. Estas controversias han llevado a protestas y resistencia por parte de las comunidades locales, que exigen soluciones más sostenibles.</p>
+            <p>El académico de la Facultad de Ingeniería Agrícola de la Universidad de Concepción, Dr. José Luis Arumí Ribera, comentó para NoticiasUdeC que “hay que estar preparados” y reiteró “la importancia de tener sistemas de almacenamiento de agua, que son los embalses. Ñuble es particularmente vulnerable porque no tenemos espaldas”.</p>
+            <p>“Desde que llegué a la región, hace 33 años, vengo escuchando hablar de la construcción del embalse La Punilla, del Zapallar, del Chillán y de muchos otros proyectos. Entonces, uno ve con cierto grado de angustia, y esto se agrava con los periodos presidenciales cortos, que hay mucha discusión, mucha pelea ideológica, pero al final no hay soluciones concretas para la gente”, puntualizó.</p>
+            <p>La crisis hídrica en Ñuble es un desafío significativo que requiere una acción coordinada y sostenible para asegurar el futuro de la región.</p>
+        </section>
 
-        <div class="section">
-            <h2>Controversias</h2>
-            <p>El proyecto del embalse Punilla ha sido criticado por su impacto ambiental y social, desplazando a comunidades y afectando ecosistemas locales. De manera similar, el embalse Zapallar ha generado conflictos debido a la falta de consulta a las comunidades afectadas y los impactos ambientales negativos. Estas controversias han llevado a protestas y resistencia por parte de las comunidades locales, que exigen soluciones más sostenibles y justas.</p>
-        </div>
-
-        <div class="section">
-            <h2>Futuro de Ñuble</h2>
-            <p>Se espera que la región enfrente condiciones climáticas más severas, con menos precipitaciones y más sequías prolongadas. Es esencial implementar prácticas sostenibles y una gestión eficiente del agua para asegurar el futuro de la región.</p>
-        </div>
-
-        <div class="section">
-            <h2>Recursos y Referencias</h2>
-            <p>Para más información sobre la crisis hídrica en Ñuble y los esfuerzos para enfrentarla, consulta los siguientes recursos:</p>
-            <ul>
-                <li><a href="https://www.24horas.cl/programas/entrevistas/el-invierno-mas-seco-de-los-ultimos-60-anos-la-region-del-nuble-es-el-epicentro-de-la-sequia--3362463">Entrevista en TVN</a></li>
-                <li><a href="https://noticias.udec.cl/experto-udec-reconoce-incertidumbre-climatica-este-ano-y-llama-a-concretar-embalses-en-nuble/">Noticias UdeC</a></li>
-            </ul>
-        </div>
+        <footer>
+            <p>© 2024 Horizonte Hídrico Ñuble</p>
+        </footer>
     </div>
+    <!-- Imágenes en los bordes -->
+    <img src="imagen1.png" alt="Dibujo 1" class="border-image top-left">
+    <img src="imagen2.png" alt="Dibujo 2" class="border-image top-right">
+    <img src="imagen3.png" alt="Dibujo 3" class="border-image bottom-left">
+    <img src="imagen4.png" alt="Dibujo 4" class="border-image bottom-right">
 
-    <footer class="footer">
-        <p>© 2024 Horizonte Hídrico Ñuble</p>
-    </footer>
+    <script>
+        // Datos del río Chillán
+        var trace1 = {
+            x: ['2019', '2020', '2021', '2022', '2023'],
+            y: [50, 45, 55, 50, 60],
+            type: 'scatter'
+        };
+        var data1 = [trace1];
+        var layout1 = {
+            title: 'Variaciones en el caudal del río Chillán',
+            xaxis: { title: 'Año' },
+            yaxis: { title: 'Caudal (m³/s)' }
+        };
+        Plotly.newPlot('chart-chillan', data1, layout1);
+
+        // Datos del río Itata
+        var trace2 = {
+            x: ['2019', '2020', '2021', '2022', '2023'],
+            y: [60, 55, 65, 60, 70],
+            type: 'scatter'
+        };
+        var data2 = [trace2];
+        var layout2 = {
+            title: 'Variaciones en el caudal del río Itata',
+            xaxis: { title: 'Año' },
+            yaxis: { title: 'Caudal (m³/s)' }
+        };
+        Plotly.newPlot('chart-itata', data2, layout2);
+    </script>
 </body>
 </html>
+
 
